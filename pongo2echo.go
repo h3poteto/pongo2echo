@@ -66,7 +66,7 @@ func (p *Pongo2Echo) UseContextProcessor(processor ContextProcessorFunc) {
 
 // Abs returns absolute path to file requested.
 // Search path is configured in AddDirectory method.
-// And default directory is "./template".
+// And default directory is "./templates".
 func (p *Pongo2Echo) Abs(base, name string) string {
 	if filepath.IsAbs(name) {
 		return name
