@@ -36,4 +36,4 @@ func main() {
 You can use pongo2 templte in `Render` function, and pass variables to template.
 
 ## License
-The package is available as open source under the terms of the MIT License.
+The package is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
