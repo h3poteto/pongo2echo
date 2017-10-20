@@ -15,7 +15,6 @@ import (
 // Pongo2Echo implements custom pongo2 rendering engine for echo
 type Pongo2Echo struct {
 	dirs              []string
-	filters           []string
 	templates         *pongo2.TemplateSet
 	contextProcessors []ContextProcessorFunc
 }
