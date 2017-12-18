@@ -113,7 +113,7 @@ func (p *Pongo2Echo) RegisterFilter(name string, fn pongo2.FilterFunction) {
 	pongo2.RegisterFilter(name, fn)
 }
 
-// Set debug mode to the template set.
+// SetDebug sets debug mode to the template set.
 // See pongo2.TemplateSet.Debug for more information.
 func (p *Pongo2Echo) SetDebug(v bool) {
 	p.mutex.Lock()
