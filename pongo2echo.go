@@ -31,6 +31,7 @@ import (
 	"io/ioutil"
 	"os"
 	"path/filepath"
+	"sync"
 
 	"github.com/flosch/pongo2"
 	"github.com/labstack/echo"
@@ -42,6 +43,7 @@ type Pongo2Echo struct {
 	dirs              []string
 	templates         *pongo2.TemplateSet
 	contextProcessors []ContextProcessorFunc
+	mutex             *sync.Mutex
 }
 
 // NewRenderer creates a new Pongo2Echo struct.
@@ -50,6 +52,7 @@ func NewRenderer() *Pongo2Echo {
 		dirs: []string{
 			"templates",
 		},
+		mutex: &sync.Mutex{},
 	}
 	p.templates = pongo2.NewSet("templates", p)
 
@@ -108,6 +111,14 @@ func (p *Pongo2Echo) RegisterTag(name string, parserFunc pongo2.TagParser) {
 // It calls pongo2.RegisterFilter method.
 func (p *Pongo2Echo) RegisterFilter(name string, fn pongo2.FilterFunction) {
 	pongo2.RegisterFilter(name, fn)
+}
+
+// SetDebug sets debug mode to the template set.
+// See pongo2.TemplateSet.Debug for more information.
+func (p *Pongo2Echo) SetDebug(v bool) {
+	p.mutex.Lock()
+	defer p.mutex.Unlock()
+	p.templates.Debug = v
 }
 
 // Render renders the view.
