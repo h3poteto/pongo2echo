@@ -33,7 +33,7 @@ import (
 	"path/filepath"
 	"sync"
 
-	"github.com/flosch/pongo2"
+	"github.com/flosch/pongo2/v6"
 	"github.com/labstack/echo/v4"
 	"github.com/pkg/errors"
 )
