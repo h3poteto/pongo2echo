@@ -1,7 +1,9 @@
 # Pongo2Echo
 
-[![CircleCI](https://circleci.com/gh/h3poteto/pongo2echo.svg?style=svg)](https://circleci.com/gh/h3poteto/pongo2echo)
+[![Build](https://github.com/h3poteto/pongo2echo/actions/workflows/build.yml/badge.svg)](https://github.com/h3poteto/pongo2echo/actions/workflows/build.yml)
 [![GoDoc](https://godoc.org/github.com/h3poteto/pongo2echo?status.svg)](https://godoc.org/github.com/h3poteto/pongo2echo)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/h3poteto/pongo2echo)](https://github.com/h3poteto/pongo2echo/releases)
+[![Dependabot](https://img.shields.io/badge/Dependabot-enabled-blue.svg)](https://dependabot.com)
 
 `pongo2echo` provides [pongo2](https://github.com/flosch/pongo2) renderer for [echo](https://github.com/labstack/echo) which is web application framework written by golang.
 Pongo2 is a template engine likes django-syntax for golang.
