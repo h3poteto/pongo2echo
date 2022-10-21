@@ -5,9 +5,3 @@ updates:
   schedule:
     interval: daily
   open-pull-requests-limit: 20
-  ignore:
-  - dependency-name: github.com/labstack/echo/v4
-    versions:
-    - 4.1.17
-    - 4.2.0
-    - 4.2.1
